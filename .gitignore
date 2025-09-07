@@ -1,0 +1,23 @@
+# Ignore Python virtual environments
+env/
+venv/
+ENV/
+.venv/
+.env/
+
+# Ignore package directories
+node_modules/
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Ignore pipenv and poetry files
+Pipfile.lock
+poetry.lock
+
+# Ignore other common package manager folders
+*.log
+.npm/
+.cache/
