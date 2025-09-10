@@ -1,2 +1,4 @@
 # Ignore all .ev files
-*.env
+.env
+db.sqlite3
+__pycache__

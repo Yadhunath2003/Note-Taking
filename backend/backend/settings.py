@@ -16,10 +16,11 @@ from dotenv import load_dotenv
 import dj_database_url
 import os
 
-load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -106,9 +107,8 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-DATABASE_URLS = os.getenv('DATABASE_URL')
 DATABASES = {
-    'default': dj_database_url.config(default=DATABASE_URLS, conn_max_age=600)
+    'default': dj_database_url.config(env="DATABASE_URL", conn_max_age=600, ssl_require=True)
 }
 
 
