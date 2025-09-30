@@ -21,16 +21,4 @@ api.interceptors.request.use((config) => {
     return Promise.reject(error);
 });
 
-// // Example: GET notes
-// export const getNotes = () => api.get('/notes');
-
-// // Example: POST a new note
-// export const createNote = (note) => api.post('/notes', note);
-
-// // Example: DELETE a note
-// export const deleteNote = (id) => api.delete(`/notes/${id}`);
-
-// // Example: UPDATE a note
-// export const updateNote = (id, note) => api.put(`/notes/${id}`, note);
-
 export default api;
